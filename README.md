@@ -1,0 +1,1 @@
+# Klasifikasi-Penyakit-Daun-Padi-dengan-Metode-CNN
