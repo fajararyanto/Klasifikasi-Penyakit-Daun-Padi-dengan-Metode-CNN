@@ -88,4 +88,5 @@ Output:
 
 # 📈 Contoh Hasil
 - Hasil prediksi: BrownSpot
+  <br>
   ![Hasil](Model/Hasil.png)
