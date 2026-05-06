@@ -78,11 +78,12 @@ Evaluasi dilakukan dengan:
 
 <br>Visualisasi:
 - Grafik Accuracy vs Epoch
-- Grafik Loss vs Epoch
 
 ![Hasil](Model/Accuracy.png)
 
 <br>
+
+- Grafik Loss vs Epoch
 
 ![Hasil](Model/Loss.png)
 
