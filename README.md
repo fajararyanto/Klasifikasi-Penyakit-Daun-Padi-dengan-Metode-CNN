@@ -85,6 +85,10 @@ Evaluasi dilakukan dengan:
 # 🔬 Visualisasi Feature Map
 Menampilkan hasil ekstraksi fitur dari setiap layer CNN untuk memahami bagaimana model bekerja.
 
+<br>
+
+![Hasil](Model/VisualisasiCNN.png)
+
 # 🧪 Testing / Inference
 Model dapat digunakan untuk memprediksi gambar baru:
 Output:
