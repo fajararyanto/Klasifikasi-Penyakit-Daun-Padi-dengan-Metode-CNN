@@ -19,7 +19,6 @@ Proyek ini bertujuan untuk mengklasifikasikan penyakit daun padi menggunakan met
 Dataset disimpan dalam format direktori sebagai berikut:
 
 Dataset/
-<br>│
 <br>├── brown_spot/
 <br>├── Leaf smut/
 <br>└── tungro/
@@ -77,6 +76,12 @@ Evaluasi dilakukan dengan:
 - Grafik Accuracy vs Epoch
 - Grafik Loss vs Epoch
 
+![Hasil](Model/Accuracy.png)
+
+<br>
+
+![Hasil](Model/Loss.png)
+
 # 🔬 Visualisasi Feature Map
 Menampilkan hasil ekstraksi fitur dari setiap layer CNN untuk memahami bagaimana model bekerja.
 
@@ -90,3 +95,11 @@ Output:
 - Hasil prediksi: BrownSpot
   <br>
   ![Hasil](Model/Hasil.png)
+
+- Hasil prediksi: Leaf Smut
+  <br>
+  ![Hasil](Model/HasilLeafSmut.png)
+  
+- Hasil prediksi: Tungro
+  <br>
+  ![Hasil](Model/HasilTungro.png)
