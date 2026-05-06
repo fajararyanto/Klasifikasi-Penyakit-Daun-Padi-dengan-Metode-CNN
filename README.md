@@ -23,6 +23,10 @@ Dataset/
 <br>├── Leaf smut/
 <br>└── tungro/
 
+Dataset sepenuhnya berasal dari Kaggle:
+
+🔗 [Rice Leaf Disease Dataset](https://www.kaggle.com/datasets/yahyaazz/penyakit-daun-padi)
+
 # ⚙️ Tahapan Proses
 
 1. Data Preparation
