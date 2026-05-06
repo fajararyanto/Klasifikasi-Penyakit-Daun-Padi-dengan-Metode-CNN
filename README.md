@@ -41,8 +41,8 @@ Dataset sepenuhnya berasal dari Kaggle:
 - Shear transformation
 
 3. Data Generator
-<br>Menggunakan:
-flow_from_directory()
+<br> Menggunakan:
+<br> flow_from_directory()
 
 Untuk:
 - Load data otomatis
