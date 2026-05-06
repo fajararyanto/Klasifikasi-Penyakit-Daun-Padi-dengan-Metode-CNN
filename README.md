@@ -1,23 +1,90 @@
-# Klasifikasi-Penyakit-Daun-Padi-dengan-Metode-CNN
-Proyek ini adalah aplikasi web full-stack yang dirancang untuk deteksi otomatis penyakit pada daun padi. Pengguna dapat mengunggah gambar daun padi, dan sistem akan menganalisisnya menggunakan model machine learning yang telah dilatih sebelumnya. Aplikasi ini menyediakan informasi rinci tentang penyakit yang terdeteksi, termasuk deskripsi, metode pencegahan, dan rekomendasi kaya yang dihasilkan secara dinamis oleh Google Gemini API.
+# 🌾 Klasifikasi Penyakit Daun Padi Menggunakan CNN
 
-# Fitur
+# 📌 Deskripsi
 
-Frontend (Aplikasi React):
+Proyek ini bertujuan untuk mengklasifikasikan penyakit daun padi menggunakan metode Convolutional Neural Network (CNN). Model dilatih untuk mengenali tiga jenis penyakit daun padi berdasarkan citra digital.
 
-Autentikasi Pengguna: Registrasi dan login aman menggunakan JWT.
-Unggah Gambar & Pindai Kamera: Pengguna dapat mengunggah gambar atau menggunakan kamera perangkat mereka (dengan kemampuan beralih kamera depan/belakang) untuk pemindaian real-time.
-Deteksi Penyakit: Kirim gambar daun padi untuk analisis.
-Hasil Analisis Rinci: Lihat prediksi penyakit, skor kepercayaan, deskripsi statis, metode pencegahan, dan wawasan yang dihasilkan AI dari Google Gemini.
-Manajemen Profil Pengguna: Lihat dan edit detail profil pengguna.
-Dasbor Admin: (Tersirat dari rute backend) Mengelola pengguna dan informasi penyakit.
-Desain Responsif: Dioptimalkan untuk berbagai perangkat, termasuk seluler.
-Backend (API Node.js & Express.js):
+# 🦠 Kelas yang digunakan:
 
-Manajemen Pengguna: Operasi CRUD untuk pengguna.
-Autentikasi: Autentikasi berbasis JWT untuk akses API yang aman.
-Manajemen Informasi Penyakit: Menyimpan dan mengambil data penyakit statis (deskripsi, pencegahan).
-Penanganan Unggahan Gambar: Menggunakan multer untuk unggahan gambar yang efisien.
-Integrasi Model Machine Learning: Mengintegrasikan model ResNet50v2 berformat ONNX untuk inferensi gambar menggunakan onnxruntime-node.
-Integrasi Google Gemini API: Mengambil informasi dan rekomendasi dinamis yang kaya untuk penyakit yang terdeteksi.
-Integrasi Basis Data: Menyimpan data pengguna, riwayat deteksi, dan informasi penyakit dalam basis data MySQL.
+1. Brown Spot
+2. Leaf Smut
+3. Tungro
+
+# 🎯 Tujuan
+1. Membangun model CNN untuk klasifikasi citra daun padi
+2. Meningkatkan akurasi deteksi penyakit tanaman
+3. Membantu proses identifikasi penyakit secara otomatis
+
+# 🗂️ Struktur Dataset
+Dataset disimpan dalam format direktori sebagai berikut:
+
+Dataset/
+<br>│
+<br>├── brown_spot/
+<br>├── Leaf smut/
+<br>└── tungro/
+
+# ⚙️ Tahapan Proses
+
+1. Data Preparation
+- Mengambil dataset dari Google Drive
+- Memisahkan data berdasarkan kelas
+
+2. Preprocessing & Augmentasi
+<br>Menggunakan Image Data Generator:
+- Rescale (normalisasi)
+- Rotasi
+- Flip horizontal
+- Shear transformation
+
+3. Data Generator
+<br>Menggunakan:
+flow_from_directory()
+
+Untuk:
+- Load data otomatis
+- Labeling
+- Batching
+
+# 🧠 Arsitektur Model CNN
+Model terdiri dari:
+- Conv2D
+- MaxPooling2D
+- Flatten
+- Dense Layer
+- Dropout
+
+<br>Output layer:
+- Dense(3, activation='softmax')
+
+# 🏋️ Training Model
+
+- Optimizer: RMSprop
+- Loss Function: categorical_crossentropy
+- Epoch: 50
+- Validation Split: 20%
+
+<br>Model terbaik disimpan menggunakan:
+- ModelCheckpoint
+
+# 📊 Evaluasi Model
+Evaluasi dilakukan dengan:
+- Accuracy
+- Loss
+- Validation Accuracy
+
+<br>Visualisasi:
+- Grafik Accuracy vs Epoch
+- Grafik Loss vs Epoch
+
+# 🔬 Visualisasi Feature Map
+Menampilkan hasil ekstraksi fitur dari setiap layer CNN untuk memahami bagaimana model bekerja.
+
+# 🧪 Testing / Inference
+Model dapat digunakan untuk memprediksi gambar baru:
+Output:
+- Probabilitas tiap kelas
+- Hasil klasifikasi akhir
+
+# 📈 Contoh Hasil
+- Hasil prediksi: BrownSpot
